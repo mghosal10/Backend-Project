@@ -17,11 +17,13 @@
 A. Setting up the database    
   
 I have used MySql database for saving the etf data in the backend.  
-Install mySql database and execute the below DDL query -   
-    1. create table etfdata(ticker varchar(50) not null primary key, etfname varchar(255), description varchar(5000), date timestamp not null);   
-    2. create table etfholdings (holdkey varchar(700) primary key, ticker varchar(50) not null, holdingsname varchar(500), holdweight float, date timestamp not null);    
-    3. create table sectors (sectorkey varchar(700) primary key, ticker varchar(50) not null, sectorname varchar(255), sectorweight float, date timestamp not null);   
-    4. create table geography(geokey varchar(700) primary key, ticker varchar(50) not null, country varchar(255), geoweight float, date timestamp not null);    
+Install mySql database and execute the below DDL query - 
+    1. create database etf;   
+    2. create table etfdata(ticker varchar(50) not null primary key, etfname varchar(255), description varchar(5000), date timestamp not null);   
+    3. create table etfholdings (holdkey varchar(700) primary key, ticker varchar(50) not null, holdingsname varchar(500), holdweight float, date timestamp not null);    
+    4. create table sectors (sectorkey varchar(700) primary key, ticker varchar(50) not null, sectorname varchar(255), sectorweight float, date timestamp not null);   
+    5. create table geography(geokey varchar(700) primary key, ticker varchar(50) not null, country varchar(255), geoweight float, date timestamp not null);    
+    6. In data.js and api.js database is connected to mysql using host: localhost, username: root, password: admin12345, database name: etf
    
    
 B. Running the REST API through Postman
