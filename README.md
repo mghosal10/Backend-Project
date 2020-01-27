@@ -23,7 +23,7 @@ Step 1 - Select request method as "POST" and url as "http://localhost:3001/api/l
 Step 2 - In another window, select request method as "GET" and url as "http://localhost:3001/api/etfsymbols". Go to the "Headers" tab and add the "Key" as "Authorization" and "value" as "Bearer <Token>". If the value returned is "Forbidden", it means your token has expired and you need to replace the expired token with another active token. This would return the list of existing etf symbols in the database.   
 Step 3 - In another window, select request method as "GET" and url as "http://localhost:3001/api/etfdata". Go to the "Headers" tab and add the "Key" as "Authorization" and "value" as "Bearer <Token>". If the value returned is "Forbidden", it means your token has expired and you need to replace the expired token with another active token. This endpoint would return the list of etfs and their assosciated data.
 
-Please Note: This webservice needs to be deployed on a server to be accessed remotely. Currently this code is configured to be executed on localhost, hence without setting up the database and starting the localhost server the code will not run.    
+####Please Note: This webservice needs to be deployed on a server to be accessed remotely. Currently this code is configured to be executed on localhost, hence without setting up the database and starting the localhost server the code will not run.    
 
 # Postman API Documentation
 https://documenter.getpostman.com/view/421412/SWT8hzVi?version=latest
