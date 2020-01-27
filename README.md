@@ -27,7 +27,8 @@ Install mySql database and execute the below DDL query -
    
    
 B. Running the REST API through Postman
-1. Run the file api.js through the terminal by executing the command "node api.js" (Be sure to be in the directory where you have the api.js located). Basically, we need to start the Express server so that our API is available on the localhost      
+1. Run the file api.js through the terminal by executing the command "node api.js" (Be sure to be in the directory where you have the api.js located). Basically, we need to start the Express server so that our API is available on the localhost   
+2. Incase you get an error saying the port is already in use, execute "sudo lsof -i :3001". This command will list all the processes that is working on port 3001. Say you see the PID of the node process as "X" then kill the process using the command "kill -9 <PID>" and then run the file api.js
 2. Go to Postman -  
 Step 1 - Select request method as "POST" and url as "http://localhost:3001/api/login". After you do a "Send" we would receive a token which remains active only for 60seconds. After 60seconds the token will expire and we will have to generate a new token.  
 Step 2 - In another window, select request method as "GET" and url as "http://localhost:3001/api/etfsymbols". Go to the "Headers" tab and add the "Key" as "Authorization" and "value" as "Bearer <Token>". If the value returned is "Forbidden", it means your token has expired and you need to replace the expired token with another active token. This would return the list of existing etf symbols in the database.   
